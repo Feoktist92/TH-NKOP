@@ -1,0 +1,167 @@
+.sliderContainer {
+    position: relative;
+    max-width: 100%;
+}
+
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+    flex: 0 0 auto;
+    max-width: 344px;
+}
+
+.doubleWidth {
+    border-radius: 600px;
+    max-width: 688px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.petal {
+    border-radius: 0px 220px;
+}
+
+.imgWrap {
+    overflow: hidden;
+    height: 344px;
+    margin-bottom: 32px;
+}
+
+.img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slideContent,
+.doubleWidthContent {
+    .title {
+        color: #525c7a;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: -0.056px;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .date {
+        color: #a2acc7;
+        font-size: 18px;
+        font-weight: 500;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.doubleWidthContent {
+    width: 688px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: -40px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.prev {
+    left: 32px;
+}
+
+.next {
+    right: 32px;
+}
+
+@media (max-width: 1440px) {
+    .slide {
+        max-width: 240px;
+    }
+    .imgWrap {
+        height: 240px;
+    }
+
+    .doubleWidth {
+        max-width: 480px;
+    }
+    .doubleWidthContent {
+        width: 480px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slide {
+        max-width: 180px;
+    }
+
+    .imgWrap {
+        height: 180px;
+    }
+
+    .doubleWidth {
+        max-width: 360px;
+    }
+
+    .doubleWidthContent {
+        width: 360px;
+    }
+
+    .arrow {
+        width: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        max-width: 120px;
+    }
+
+    .imgWrap {
+        height: 120px;
+    }
+
+    .doubleWidth {
+        max-width: 240px;
+    }
+
+    .doubleWidthContent {
+        width: 240px;
+    }
+}
+
+.slider::-webkit-scrollbar {
+    width: 12px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.slider::-webkit-scrollbar-track {
+    background-color: transparent;
+}
